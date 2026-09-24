@@ -1,0 +1,22 @@
+.gradle/
+build/
+*.log
+
+# Local IDE settings and runtime data.
+.idea/
+.vscode/
+*.iml
+.env
+.env.*
+!.env.example
+local.properties
+plugins/
+logs/
+backups/
+*.bundle
+*.bak
+
+# Original and working screenshots stay local. Published guides live in resources.
+/*.png
+/*.jpg
+/*.jpeg

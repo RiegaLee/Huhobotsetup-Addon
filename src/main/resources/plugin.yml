@@ -1,0 +1,17 @@
+name: HuHoBotSetup
+version: '${version}'
+main: cn.huohuas001.huhobot.setup.HuHoBotSetupPlugin
+description: HuHoBot 可视化初始化与 QQ 群接入向导
+author: RiegaLee
+api-version: '1.16'
+depend: [HuHoBotPenguin]
+commands:
+  huhobotsetup:
+    description: 打开 HuHoBot 初始化与 QQ 群确认向导
+    usage: /huhobotsetup [status|cancel|ui <auto|dialog|menu>]
+    aliases: [hbsetup]
+    permission: huhobot.setup
+permissions:
+  huhobot.setup:
+    description: 允许配置 HuHoBot 并确认接入 QQ 群
+    default: op

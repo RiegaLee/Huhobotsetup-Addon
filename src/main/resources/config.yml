@@ -1,0 +1,9 @@
+enrollment:
+  # 一次性群接入码的有效时间，单位为秒。
+  code-expiry-seconds: 600
+  # OP 开始添加群后，等待目标群 @ 消息的时间。
+  waiting-expiry-seconds: 600
+  # 游戏内确认按钮的有效时间；应短于 QQ 被动回复的可用时限。
+  confirmation-expiry-seconds: 120
+  # 尚未确认任何群时拦截普通群指令，避免 HuHoBot 的空列表=全部群语义造成误接入。
+  block-unconfirmed-groups: true
