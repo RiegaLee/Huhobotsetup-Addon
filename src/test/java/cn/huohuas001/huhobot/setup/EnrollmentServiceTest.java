@@ -14,6 +14,17 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class EnrollmentServiceTest {
     @Test
+    void permissionGuideDirectsOnlyGroupOwnerToChangePermissions() {
+        String guide = EnrollmentService.permissionGuideText();
+        assertTrue(guide.contains("以下权限仅群主可设置"));
+        assertTrue(guide.contains("群管理员不能代为设置"));
+        assertTrue(guide.contains("如果你不是群主，请联系群主操作"));
+        assertTrue(guide.contains("群主找不到选项时"));
+        assertTrue(guide.contains("获取群内全部消息"));
+        assertTrue(guide.contains("机器人主动在群聊内发言"));
+    }
+
+    @Test
     void acceptsCompactAndSpacedEnrollmentCommandsAfterMention() {
         assertEquals(
             "ABCD-EFGH-JKLM",

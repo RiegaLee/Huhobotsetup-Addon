@@ -460,11 +460,12 @@ final class EnrollmentService {
         }
     }
 
-    private String permissionGuideText() {
-        return "【本群设置】请群主或管理员按图开启："
+    static String permissionGuideText() {
+        return "【本群设置】以下权限仅群主可设置，请群主按图开启："
             + "\n1. 获取群内全部消息"
             + "\n2. 机器人主动在群聊内发言"
-            + "\n找不到选项时，请先更新手机 QQ。";
+            + "\n群管理员不能代为设置；如果你不是群主，请联系群主操作。"
+            + "\n群主找不到选项时，请先更新手机 QQ。";
     }
 
     private String botName() {
